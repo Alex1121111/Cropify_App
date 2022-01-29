@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background3"
     tools:context=".MainActivity">
 
 
@@ -12,6 +13,7 @@
         android:layout_width="289dp"
         android:layout_height="345dp"
         android:layout_marginBottom="200sp"
+        android:elevation="2dp"
         android:src="@drawable/placeholder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,42 +23,80 @@
         tools:src="@tools:sample/avatars"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button2"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="48dp"
-        android:layout_gravity="bottom|center"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="32dp"
         android:background="@drawable/yellow_button"
         android:text="Predict"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.294"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="48dp"
         android:layout_gravity="bottom|center"
+        android:layout_marginTop="60dp"
         android:background="@drawable/button_blue"
         android:text="Select"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.198"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.645"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:padding="20dp"
+        android:layout_width="200dp"
         android:layout_height="90dp"
-        android:text="TextView"
+        android:layout_marginEnd="32dp"
+        android:text="Crop Name\nInfection"
+        android:textColor="#ffff"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintVertical_bias="0.466" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:text="Crop: "
+        android:textColor="#2aba53"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.816"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.292"
+        app:layout_goneMarginTop="200dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:text="Infection: "
+        android:textColor="#2aba53"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
